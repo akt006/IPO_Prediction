@@ -23,10 +23,14 @@ To address inflation, the data was adjusted to reflect present value.
 
 ## Exploratory Data Analysis
 The data was visualized to understand relationships between different variables and the IPO opening price. Figures below show some key findings:
-- ![Exploratory data analysis for listing opening price VS issue price](path/to/image1.png)
-- ![Exploratory data analysis for listing opening price VS Qualified institutional buyer](path/to/image2.png)
-- ![Exploratory data analysis for listing opening price VS High net worth individual participation](path/to/image3.png)
-- ![Exploratory data analysis for listing opening price VS Retail participation](path/to/image4.png)
+- ![Exploratory data analysis for listing opening price VS issue price](openingVSissue.png)
+  *Opening Price Vs Isuue Price*
+- ![Exploratory data analysis for listing opening price VS Qualified institutional buyer](openingVSqib.png)
+  *Opening Price Vs QIB*
+- ![Exploratory data analysis for listing opening price VS High net worth individual participation](openingVShni.png)
+  *Opening Price Vs HNI*
+- ![Exploratory data analysis for listing opening price VS Retail participation](openingVSrii.png)
+  *Opening Price Vs RII*
 
 ## Algorithms Used
 1. **Random Imputation**: Used to handle missing data by replacing missing values with random observations from the feature.
@@ -35,6 +39,18 @@ The data was visualized to understand relationships between different variables 
 
 ## Results
 The proposed model was tested using various algorithms, and the performance was evaluated based on accuracy and prediction reliability.
+| Algorithms                        | Accuracy | Accuracy Metric Used |
+|-----------------------------------|----------|----------------------|
+| Random Forest (n_estimators=100)  | 80.56    | accuracy_score       |
+| Random Forest (n_estimators=50)   | 77.37    | accuracy_score       |
+| KNN (cross val)                   | 61.63    | cross_val_score      |
+| KNN (normalized)                  | 74.03    | accuracy_score       |
+| Decision Tree (depth=10)          | 60.07    | accuracy_score       |
+| Prediction with Intervals         | 68.45    | r2_score             |
+| Gradient Boosting                 | 84.5     | gbr.score            |
+![Acccuracy of Models Compared](Accuracy_of_Models_Compared.png)
+  *Acccuracy of Models Compared*
+
 
 ## Conclusion
 The project successfully developed a machine learning model that predicts IPO opening prices with higher accuracy than traditional methods. This model can help retail investors make better-informed decisions, potentially reducing financial losses.
@@ -43,9 +59,9 @@ The project successfully developed a machine learning model that predicts IPO op
 We extend our special thanks to Dr. Ashish Kumar Dwivedi for his support and guidance throughout the project. We also thank the academic setup for providing this learning opportunity.
 
 ## Images of Results
-![Exploratory Data Analysis 1](path/to/image1.png)
-![Exploratory Data Analysis 2](path/to/image2.png)
-![Algorithm Performance](path/to/image3.png)
+![Exploratory Data Analysis 1](random forest.png)
+![Exploratory Data Analysis 2](gradient_boosting.png)
+![Algorithm Performance](knn.png)
 
 ## Contact
 For more information, please contact:
